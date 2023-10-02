@@ -17,7 +17,7 @@
 		B09E87262ACAE5BF00BF5A97 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09E87252ACAE5BF00BF5A97 /* HomeView.swift */; };
 		B09E87282ACAE5C500BF5A97 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09E87272ACAE5C500BF5A97 /* HomeViewModel.swift */; };
 		B09E872B2ACAE5D500BF5A97 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09E872A2ACAE5D500BF5A97 /* ActivityModel.swift */; };
-		B09E872D2ACAE5DB00BF5A97 /* ActivityDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09E872C2ACAE5DB00BF5A97 /* ActivityDetailModel.swift */; };
+		B09E872F2ACB224D00BF5A97 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09E872E2ACB224D00BF5A97 /* CategoryModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,7 @@
 		B09E87252ACAE5BF00BF5A97 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B09E87272ACAE5C500BF5A97 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B09E872A2ACAE5D500BF5A97 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
-		B09E872C2ACAE5DB00BF5A97 /* ActivityDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailModel.swift; sourceTree = "<group>"; };
+		B09E872E2ACB224D00BF5A97 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				B09E872A2ACAE5D500BF5A97 /* ActivityModel.swift */,
-				B09E872C2ACAE5DB00BF5A97 /* ActivityDetailModel.swift */,
+				B09E872E2ACB224D00BF5A97 /* CategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -294,9 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B09E87232ACAE05000BF5A97 /* Networking.swift in Sources */,
+				B09E872F2ACB224D00BF5A97 /* CategoryModel.swift in Sources */,
 				B09E87262ACAE5BF00BF5A97 /* HomeView.swift in Sources */,
 				B09E872B2ACAE5D500BF5A97 /* ActivityModel.swift in Sources */,
-				B09E872D2ACAE5DB00BF5A97 /* ActivityDetailModel.swift in Sources */,
 				B09E87282ACAE5C500BF5A97 /* HomeViewModel.swift in Sources */,
 				B02A503B2ACADF9C00D34281 /* Boredom_Slayer_iOSApp.swift in Sources */,
 			);

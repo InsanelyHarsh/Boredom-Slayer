@@ -16,13 +16,13 @@ public class BoredomSlayerBackendApplication {
 
 
 
-	@Bean
-	public CommandLineRunner commandLineRunner(ActivityService activityService) {
-		return (args) -> {
-			activityService.addActivity(new ActivityModel(1L,"Watch Insta Reels"));
-			activityService.addActivity(new ActivityModel(2L,"Watch YT Shorts"));
-			activityService.addActivity(new ActivityModel(3L,"Binge Watch"));
-			activityService.addActivity(new ActivityModel(0L,"Play Games!"));
-		};
-	}
+//	@Bean
+//	public CommandLineRunner commandLineRunner(ActivityService activityService) {
+//		return (args) -> {
+//			activityService.addActivity(new ActivityModel(1L,"Watch Insta Reels"));
+//			activityService.addActivity(new ActivityModel(2L,"Watch YT Shorts"));
+//			activityService.addActivity(new ActivityModel(3L,"Binge Watch"));
+//			activityService.addActivity(new ActivityModel(0L,"Play Games!"));
+//		};
+//	}
 }

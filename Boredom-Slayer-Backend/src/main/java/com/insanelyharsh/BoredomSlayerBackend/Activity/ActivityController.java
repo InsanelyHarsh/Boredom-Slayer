@@ -2,25 +2,25 @@ package com.insanelyharsh.BoredomSlayerBackend.Activity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/generate")
 public class ActivityController {
 
     @Autowired
     private ActivityService activityService;
 
-    @GetMapping("/generate")
+    @GetMapping("")
     ActivityModel getActivity(){
         return activityService.generateRandomActivity();
     }
-    @GetMapping("/generate/test")
-    String testAPI(){
-        return "Working";
+
+    @GetMapping("/{categoryId}")
+    Optional<ActivityModel> getActivityByCategory(@PathVariable Long categoryId){
+        return activityService.getForCategory(categoryId);
     }
 }

@@ -209,5 +209,85 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7CA49A0-EDAB-498F-BF3A-9D8D38CFF582"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Boredom-Slayer-iOS/Home/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F7CA49A0-EDAB-498F-BF3A-9D8D38CFF582 - 899b5bd73ba2db53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;Boredom_Slayer_iOS.CategoryModel&gt;, Swift.Int, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in Boredom_Slayer_iOS.HomeView.body.getter : some"
+                  moduleName = "Boredom-Slayer-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harshyadav/Desktop/Code/Boredom-Slayer/Boredom-Slayer-iOS/Boredom-Slayer-iOS/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "F7CA49A0-EDAB-498F-BF3A-9D8D38CFF582 - 599e5247994a14c7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Boredom_Slayer_iOS.CategoryModel) -&gt; SwiftUI.Button&lt;SwiftUI.Text&gt; in closure #3 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;Boredom_Slayer_iOS.CategoryModel&gt;, Swift.Int, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;)&gt; in Boredom_Slayer_iOS.HomeView.body.getter : some"
+                  moduleName = "Boredom-Slayer-iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/harshyadav/Desktop/Code/Boredom-Slayer/Boredom-Slayer-iOS/Boredom-Slayer-iOS/Home/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "184">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFF19F4D-4839-42AF-9733-A3EC595ACEC7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Boredom-Slayer-iOS/Home/HomeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "getAllCategories()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46A09E6F-6186-40C2-BB9A-574C1CB01854"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Boredom-Slayer-iOS/Home/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
