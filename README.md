@@ -51,14 +51,13 @@ For detailed information on how to use the Boredom Slayer API,
 check out our [API documentation](ApiDcoumentation.md).
 
 ### iOS App
-Clone this Repository and open Boredom-Slayer-iOS using XCode.
-> Note: You'll need MacOS and Apple Developer Account.
+Clone this Repository and open `Boredom-Slayer-iOS` using XCode.
+> Note: You'll need MacOS and Apple Developer Account to run Use Application.
 
-### Contributing
-Want to make Boredom Slayer even better? We welcome contributions
-from the community. Check out our contribution guidelines to get started.
 
-### Stay in Touch
-Stay updated on the latest news, features, and developments by following us on Twitter and Facebook. We'd love to hear your feedback and suggestions!
+### Contact
+[Linkedin](https://www.linkedin.com/in/insanelyharsh/)
+[Twitter](https://twitter.com/amiharsh_)
+[GitHub](https://github.com/insanelyHarsh/)
 
 Boredom Slayer - Your boredom's worst enemy, your entertainment's best friend!

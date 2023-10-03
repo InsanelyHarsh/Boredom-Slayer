@@ -11,29 +11,36 @@ class HomeViewModel:ObservableObject{
     private let networking:Networking = Networking()
     
     @Published
+    var selectedCategory:CategoryModel? = nil
+    
+    @Published
     var activity:ActivityModel? = nil
     
     @Published
     var categoryList:[CategoryModel] = []
     
-    func generateActivity(){
-        networking.getJson(type: ActivityModel.self,url: "http://localhost:8080/generate") { result in
-            switch result {
-            case .success(let success):
-                DispatchQueue.main.async {
-                    self.activity = success
-                }
-            case .failure(let failure):
-                print(failure)
-            }
-        }
-    }
+//    func generateActivity(){
+//        networking.getJson(type: ActivityModel.self,url: "http://localhost:8080/generate") { result in
+//            switch result {
+//            case .success(let success):
+//                DispatchQueue.main.async {
+//                    self.activity = success
+//                }
+//            case .failure(let failure):
+//                print(failure)
+//            }
+//        }
+//    }
     
     
-    func getActivityFor(category:CategoryModel){
-        let categoryID:Int = category.categoryID
+    func getActivityFor(category:CategoryModel?){
+        let categoryID:Int? = category?.categoryID
         
-        networking.getJson(type: ActivityModel.self,url: "http://localhost:8080/generate/\(categoryID)") { result in
+        var baseURL = "http://localhost:8080/generate"
+        if let categoryID = categoryID{
+            baseURL += "/\(categoryID)"
+        }
+        networking.getJson(type: ActivityModel.self,url: baseURL) { result in
             switch result {
             case .success(let success):
                 DispatchQueue.main.async {

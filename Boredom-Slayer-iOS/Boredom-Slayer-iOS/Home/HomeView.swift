@@ -8,42 +8,45 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var homeVM:HomeViewModel = HomeViewModel()
+    @StateObject private var homeVM:HomeViewModel = HomeViewModel()
     
-    @State var showingConfirmation:Bool = false
-    @State var selectedCategory:CategoryModel? = nil
+    @State private var showingConfirmation:Bool = false
     
     var body: some View {
         NavigationStack {
-            VStack{
+            VStack(alignment: .leading){
                 if let activity = homeVM.activity{
-                    VStack(alignment: .leading) {
-                        Text(activity.activityName)
-                        .font(.title)
-                        .bold()
+                    VStack(alignment:.leading,spacing: 10){
+                        VStack(alignment:.leading){
+                            Text(activity.activityName)
+                                .fontDesign(.rounded)
+                            .font(.headline)
+                            .bold()
+                            
+                            Text(activity.categoryModel.categoryName)
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
                         
                         Text(activity.activityDescription)
-                            .font(.callout)
-                            .foregroundColor(.gray)
-                        
-                        Text(activity.categoryModel.categoryName)
-                            .font(.body)
+                            .font(.subheadline)
                     }
-                    .frame(maxWidth: .infinity)
                 }
                 
                 Spacer()
                 
                 HStack{
                     
-                    Button("Generate") {
-                        self.homeVM.generateActivity()
-                    }
-                    .frame(maxWidth: .infinity)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background{
-                        Color.orange.cornerRadius(10)
+                    Button {
+                        self.homeVM.getActivityFor(category: homeVM.selectedCategory)
+                    } label: {
+                        Text(homeVM.selectedCategory != nil ? homeVM.selectedCategory!.categoryName : "Generate")
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background{
+                                Color.orange.cornerRadius(10)
+                            }
                     }
                     
                     Button {
@@ -55,19 +58,30 @@ struct HomeView: View {
                 }.padding(.horizontal,60)
                 
             }
+            .frame(maxWidth: .infinity)
+            .padding(.horizontal)
             .navigationTitle("Boredom Slayer")
             .navigationBarTitleDisplayMode(.inline)
         }
+        
         .onAppear{
             self.homeVM.getAllCategories()
         }
+        
+        .onChange(of: self.showingConfirmation, perform: { newValue in
+            if(newValue && self.homeVM.categoryList.isEmpty){
+                self.homeVM.getAllCategories()
+            }
+        })
+        
         .confirmationDialog("Select Category", isPresented: $showingConfirmation) {
             ForEach(homeVM.categoryList,id:\.categoryID){ category in
                 Button(category.categoryName) {
-                    self.homeVM.getActivityFor(category: category)
+                    
+                    self.homeVM.selectedCategory = category
                 }
             }
-            Button("Cancel", role: .cancel) { }
+            Button("Cancel", role: .cancel) { self.homeVM.selectedCategory = nil }
         } message: {
             Text("Select Category")
         }
